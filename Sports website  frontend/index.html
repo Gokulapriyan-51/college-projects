@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportify</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #007bff, #f686a7);
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent);
+            animation: rotateBG 10s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotateBG {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #000; 
+            color: #fff; 
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: #fff; 
+        }
+
+        .nav-links li {
+            list-style: none;
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff; 
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f75a8c; 
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .mission-vision {
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1); 
+            text-align: center;
+        }
+
+        .mission-vision .section {
+            margin-bottom: 30px;
+        }
+
+        .mission-vision h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .mission-vision p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .login-container,
+        .signup-container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none; 
+        }
+
+        .login-box,
+        .signup-box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #031d39;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .links {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .mission-vision p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Sportify</div>
+        <ul class="nav-links">
+            <li><a href="facility.html">Facility</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="store.html">Store</a></li>
+        </ul>
+        <button class="btn-login" onclick="goToLogin()">Login</button>
+    </nav>
+
+    <section class="hero">
+        <h1>Become Fitter, Stronger & More Confident!</h1>
+        <p>Push harder today if You Want a Different Tomorrow</p>
+    </section>
+
+    <section class="mission-vision">
+        <div class="section mission">
+            <h2>Our Mission</h2>
+            <p>Our mission is to infuse society with soul. The exercise experience that our riders through one-of-a-kind, rockstar instructors lead is uplifting and contemplative and is intended to improve body, mind, and soul.</p>
+        </div>
+        <div class="section vision">
+            <h2>Our Vision</h2>
+            <p>BE HAPPY. BE FIT. Our vision is to provide an affordable healthy lifestyle because fitness is a way of life. One stop for everyone's mental and physical well-being. Picture yourself here. There is a lot waiting for you.</p>
+        </div>
+    </section>
+
+    <script>
+        function goToLogin() {
+          window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
